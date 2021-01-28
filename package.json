@@ -1,5 +1,5 @@
 {
-  "name": "Project-2",
+  "name": "project-2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,7 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/SergioAlmazan/Project-2.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,8 +18,10 @@
   },
   "homepage": "https://github.com/SergioAlmazan/Project-2#readme",
   "dependencies": {
+    "eslint": "^7.18.0",
     "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.4.0"
+    "sequelize": "^6.5.0"
   }
 }
