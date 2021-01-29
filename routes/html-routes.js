@@ -1,4 +1,5 @@
 // TODO - create html routes to export to server.js
+//      - can remove data variables later
 
 // currently these are using handlebars syntax, can be changed later if we decide to use a different templating tool
 
@@ -15,6 +16,11 @@ module.exports = function(app) {
     app.get("/user", function(req, res) {
         res.render("user", data);
     });
+
+    // view quiz details and other users score, optional
+    app.get("/quiz", function (req, res) {
+        res.render("quiz", data)
+    })
 
     // directs to page where a new quiz can be created
     app.get("/createQuiz", function(req, res) {
