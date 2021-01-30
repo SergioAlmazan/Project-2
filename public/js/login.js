@@ -18,6 +18,7 @@ $(document).ready(function() {
   
       // If we have an email and password we run the loginUser function and clear the form
       loginUser(userData.username, userData.password);
+      console.log("hi")
       usernameInput.val("");
       passwordInput.val("");
     });
@@ -29,7 +30,7 @@ $(document).ready(function() {
         password: password
       })
         .then(function() {
-          window.location.replace("/members");
+          window.location.replace("/users");
           // If there's an error, log the error
         })
         .catch(function(err) {

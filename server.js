@@ -7,6 +7,10 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
+// Import dotenv
+require("dotenv").config();
+
+// Import express and varients
 var express = require("express");
 var session = require("express-session");
 var exphbs = require("express-handlebars");
