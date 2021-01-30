@@ -2,6 +2,7 @@
 
 // gets all models(table) from the models folder
 var db = require("../models");
+var passport = require("../config/passport");
 
 module.exports = function(app) {
 
@@ -26,20 +27,20 @@ module.exports = function(app) {
 
     // took this from hw14
     // TODO - install and require passport and any other required files
-    // app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    //     res.json(req.user);
-    // });
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+        res.json(req.user);
+    });
 
     // // this is also from hw14
     // // TODO - hide password with bcryptjs
-    // app.post("/api/signup", function(req, res) {
-    //     db.user.create({
-    //         username: req.body.username,
-    //         password: req.body.password
-    //     }).then(function() {
-    //         res.redirect(307, "/api/login");
-    //     }).catch(function(err) {
-    //         res.status(401).json(err);
-    //     });
-    // });
+    app.post("/api/signup", function(req, res) {
+        db.user.create({
+            username: req.body.username,
+            password: req.body.password
+        }).then(function() {
+            res.redirect(307, "/api/login");
+        }).catch(function(err) {
+            res.status(401).json(err);
+        });
+    });
 };
