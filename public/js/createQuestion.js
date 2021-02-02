@@ -1,30 +1,38 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
-  var createQuestionForm = $(".createQuestion");
+  var createAnother = $("#submitAndContinue");
+  var finishQuiz = $("#submitAndFinish");
   var questionName = $("#question-input");
   var choiceA = $("#choiceA-input");
   var choiceB = $("#choiceB-input");
   var choiceC = $("#choiceC-input");
   var choiceD = $("#choiceD-input");
+  var answer = $("#answer-input");
 
-  createQuestionForm.on("submit", function(event) {
+  createAnother.on("submit", function(event) {
     event.preventDefault();
-    var quesitonData = {
+    var questionData = {
       question: questionName.val().trim(),
       choiceA: choiceA.val().trim(),
       choiceB: choiceB.val().trim(),
       choiceC: choiceC.val().trim(),
-      choiceD: choiceD.val().trim()
+      choiceD: choiceD.val().trim(),
+      answer: answer.val().trim()
     };
 
-    if(!questionData.questionName || !) {
+    if(!questionData.questionName || !questionData.choiceA || !questionData.answer) {
       return;
     }
 
-    function createQuiz(quizName, subject) {
-      $.post("/api/createQuiz", {
-        name: quizName,
-        subject: subject
+    function createQuestion(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
+        console.log("createQuestion triggerd")
+      $.post("/api/createQuestion", {
+        question: questionName,
+        choiceA: choiceA,
+        choiceB: choiceB,
+        choiceC: choiceC,
+        choiceD: choiceD,
+        answer: answer
       })
         .then(function() {
           // take user to where ever they make questions
@@ -35,6 +43,43 @@ $(document).ready(function() {
         });
     }
 
-    createQuiz(quizData.name, quizData.subject);
+    createQuestion(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer);
+  });
+
+  finishQuiz.on("submit", function(event) {
+    event.preventDefault();
+    var questionData = {
+      question: questionName.val().trim(),
+      choiceA: choiceA.val().trim(),
+      choiceB: choiceB.val().trim(),
+      choiceC: choiceC.val().trim(),
+      choiceD: choiceD.val().trim(),
+      answer: answer.val().trim()
+    };
+
+    if(!questionData.questionName || !questionData.choiceA || !questionData.answer) {
+      return;
+    }
+
+    function createQuestionAndFinish(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
+        console.log("finish triggered");
+        $.post("/api/createQuestion", {
+        question: questionName,
+        choiceA: choiceA,
+        choiceB: choiceB,
+        choiceC: choiceC,
+        choiceD: choiceD,
+        answer: answer
+      })
+        .then(function() {
+          // take user to where ever they make questions
+          window.location.replace("/user");
+        })
+        .catch(function(err) {
+          console.log(err);
+        });
+    }
+
+    createQuestionAndFinish(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer);
   });
 });
