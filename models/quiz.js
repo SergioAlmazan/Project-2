@@ -4,10 +4,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    owner: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     subject: {
       type: DataTypes.STRING,
       allowNull: false,

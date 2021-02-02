@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("the page loaded");
   // Getting references to our form and inputs
   var createAnother = $("#submitAndContinue");
   var finishQuiz = $("#submitAndFinish");
@@ -11,6 +12,9 @@ $(document).ready(function() {
 
   createAnother.on("submit", function(event) {
     event.preventDefault();
+
+    console.log("createAnother was clicked");
+
     var questionData = {
       question: questionName.val().trim(),
       choiceA: choiceA.val().trim(),
@@ -24,8 +28,9 @@ $(document).ready(function() {
       return;
     }
 
+    console.log(questionData);
+
     function createQuestion(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
-        console.log("createQuestion triggerd")
       $.post("/api/createQuestion", {
         question: questionName,
         choiceA: choiceA,
@@ -62,8 +67,7 @@ $(document).ready(function() {
     }
 
     function createQuestionAndFinish(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
-        console.log("finish triggered");
-        $.post("/api/createQuestion", {
+      $.post("/api/createQuestion", {
         question: questionName,
         choiceA: choiceA,
         choiceB: choiceB,
