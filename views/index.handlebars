@@ -1,39 +1,22 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      {{!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button> --}}
       <a class="navbar-brand" href="/">
         <img src="./css/quiznode_logo.png" class="img-fluid" alt="QuizNode logo">
       </a>
 
-{{!-- <div class="d-grid gap-2 d-md-flex"> --}}
     <a href="/login"><button type="button" class="btn btn-outline-secondary navbtn">Login</button></a>
       <a href="/login"><button type="button" class="btn btn-outline-secondary navbtn">Sign Up</button></a>
 </div>
 
     </div>
-    {{!-- <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div> --}}
+  
   </div> 
 </nav>
   
 <div class="jumbotron">
   <div class="container text-center">
     <h1>One great quiz can change the world.</h1>      
-    {{!-- <a class="btn btn-primary" href="/login" role="button">Link</a> --}}
   </div>
 </div>
 
@@ -87,14 +70,14 @@
 </div>
     </div>
     <div class="col-lg-6 inputsection">
-<form class="row g-3">
+<form class="row g-3 signup">
   <div class="col-8">
     <label for="inputEmail" class="form-label">Email</label>
-    <input type="text" class="form-control" id="inputEmail" placeholder="getstarted@quiznode.com">
+    <input type="text" class="form-control" id="username-input1" placeholder="getstarted@quiznode.com">
   </div>
   <div class="col-8">
     <label for="inputPassword" class="form-label">Password</label>
-    <input type="text" class="form-control" id="inputPassword" placeholder="password123">
+    <input type="password" class="form-control" id="password-input1" placeholder="password123">
   </div>
     <div class="col-12">
     <button type="submit" class="btn btn-secondary signupbtn">Sign Up</button>
