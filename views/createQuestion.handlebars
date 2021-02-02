@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Write a new question</h2>
+            <form class="createQuestion">
+
+            <div class="form-group">
+                <label for="question">Enter your question here</label>
+                <input type="text" class="form-control" id="question-input">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="choiceA-input" placeholder="Choice A">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="choiceB-input" placeholder="Choice B">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="choiceC-input" placeholder="Choice C">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="choiceD-input" placeholder="Choice D">
+            </div>
+
+            <div class="form-group">
+                <label for="answer">What is the correct answer?</label>
+                <select class="form-control" id="answer-input">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-default" id="submitAndContinue">Add another question.</button>
+            <button type="submit" class="btn btn-default" id="submitAndFinish">Finish quiz.</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/createQuestion.js"></script>
