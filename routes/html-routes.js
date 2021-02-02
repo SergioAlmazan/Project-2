@@ -29,11 +29,15 @@ module.exports = function(app) {
 
     // directs to page where a new quiz can be created
     app.get("/createQuiz", function(req, res) {
-        res.render("creatQuiz");
+        res.render("createQuiz");
     });
 
     // directs to page where a quiz can be taken
     app.get("/takeQuiz", function(req, res) {
         res.render("takeQuiz");
     });
+
+    app.get("/createQuestion", function(req, res) {
+        res.render("createQuestion")
+    })
 };
