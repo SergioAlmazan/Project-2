@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("the page loaded");
   // Getting references to our form and inputs
   var createAnother = $("#submitAndContinue");
   var finishQuiz = $("#submitAndFinish");
@@ -13,8 +12,6 @@ $(document).ready(function() {
   createAnother.on("click", function(event) {
     event.preventDefault();
 
-    console.log("createAnother was clicked");
-
     var questionData = {
       question: questionName.val().trim(),
       choiceA: choiceA.val().trim(),
@@ -24,14 +21,11 @@ $(document).ready(function() {
       answer: answer.val().trim()
     };
 
-    console.log(questionData);
-
     if(!questionData.question || !questionData.choiceA || !questionData.answer) {
       return;
     }
 
     function createQuestion(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
-      console.log("createQuestion was called");
       $.post("/api/createQuestion", {
         question: questionName,
         choiceA: choiceA,
@@ -62,8 +56,6 @@ $(document).ready(function() {
       choiceD: choiceD.val().trim(),
       answer: answer.val().trim()
     };
-
-    console.log(questionData);
 
     if(!questionData.question || !questionData.choiceA || !questionData.answer) {
       return;
