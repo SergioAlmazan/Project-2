@@ -41,9 +41,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   // Getting references to our form and input
-  var signUpForm = $("signupbtn");
-  var usernameInput = $("input#username-input1");
-  var passwordInput = $("input#password-input1");
+  var signUpForm = $(".signup");
+  var usernameInput = $("#username-input1");
+  var passwordInput = $("#password-input1");
 
   // When the signup button is clicked, we validate the username and password are not blank
   signUpForm.on("submit", function(event) {
@@ -52,7 +52,7 @@ $(document).ready(function() {
       username: usernameInput.val().trim(),
       password: passwordInput.val().trim()
     };
-
+    console.log(userData);
     if (!userData.username || !userData.password) {
       return;
     }
