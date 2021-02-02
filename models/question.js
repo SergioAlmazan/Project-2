@@ -23,6 +23,10 @@ module.exports = function(sequelize, DataTypes) {
     answer: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    QuizId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   });
 
