@@ -1,17 +1,17 @@
 // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
 var bcrypt = require("bcryptjs");
 // Creating our User model
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DATATYPES) {
   var User = sequelize.define("User", {
     // The email cannot be null, and must be a proper email before creation
     username: {
-      type: DataTypes.STRING,
+      type: DATATYPES.STRING,
       allowNull: false,
       unique: true,
     },
     // The password cannot be null
     password: {
-      type: DataTypes.STRING,
+      type: DATATYPES.STRING,
       allowNull: false
     }
   });
@@ -25,21 +25,20 @@ module.exports = function(sequelize, DataTypes) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
 
-  // Associating User with Quizs
-  User.associate = function(models) {
-    // When an User is deleted, also delete any associated Quizs
-    User.hasMany = (models.Quiz, {
-      onDelete: "cascade"
-    });
-  };
-
-  // Associating User with Scores
-  User.associate = function(models) {
-    // When an User is deleted, also delete any associated Scores
-    User.hasMany = (models.Score, {
-      onDelete: "cascade"
-    });
-  };
-
+    // Associating User with Quizs
+    User.associate = function(models) {
+      // When an User is deleted, also delete any associated Quizs
+      User.hasMany = (models.Quiz, {
+        onDelete: "cascade"
+      });
+    };
+  
+    // Associating User with Scores
+    User.associate = function(models) {
+      // When an User is deleted, also delete any associated Scores
+      User.hasMany = (models.Score, {
+        onDelete: "cascade"
+      });
+    };
   return User;
 };
