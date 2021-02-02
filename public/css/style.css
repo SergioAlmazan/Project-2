@@ -1,14 +1,72 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
+
+html, body {
+    background-color: whitesmoke;
+    padding: 2rem;
+    margin:0;
+    height:100%;
+    position: relative;
+    /* background-image: linear-gradient(to bottom right, rgb(83,193,31, 0.2), whitesmoke, rgb(150,61,170, 0.1), whitesmoke, rgb(254,196,63, 0.2));
+    background-size: 400%;
+    animation: bg-animation 20s infinite alternate; */
+}
+/* 
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right}
+} */
+
 .navbar {
-    margin-bottom: 0;
     border-radius: 0;
+    background-color: white;
+    border-style: none;
+    padding-bottom: 2rem;
+}
+
+.navbtn {
+    margin-top: 2rem;
+    float: right;
+    margin-left: 1rem;
+    color: black;
+}
+
+.navbar-header {
+    width: 100%;
+}
+
+.jumbotron {
+    background-color: whitesmoke;
+    margin-bottom: 2rem;
+}
+
+.g-3{
+    margin-top: 1rem;
+}
+
+.mainform {
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    margin-bottom: 2rem;
+}
+
+.signupbtn {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
     
 /* Set black background color, white text and some padding */
 footer {
     background-color: #555;
     color: white;
+    width: 100%;
     padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
 }
 
 .carousel-inner img {
