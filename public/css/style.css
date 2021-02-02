@@ -5,15 +5,7 @@ html, body {
     margin:0;
     height:100%;
     position: relative;
-    /* background-image: linear-gradient(to bottom right, rgb(83,193,31, 0.2), whitesmoke, rgb(150,61,170, 0.1), whitesmoke, rgb(254,196,63, 0.2));
-    background-size: 400%;
-    animation: bg-animation 20s infinite alternate; */
 }
-/* 
-@keyframes bg-animation {
-    0% {background-position: left}
-    100% {background-position: right}
-} */
 
 .navbar {
     border-radius: 0;
