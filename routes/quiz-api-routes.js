@@ -7,7 +7,9 @@ module.exports = function(app) {
   // get all quizes
   app.get("/api/quizes", function(req, res) {
     db.Quiz.findAll({
-      include: [db.score, db.quesiton]
+      include: db.Quesiton
+    }).then(function(dbQuiz) {
+      res.json(dbQuiz);
     });
   });
 
@@ -17,8 +19,9 @@ module.exports = function(app) {
       where: {
         subject: req.params.subject
       },
-      include: [db.score, db.question]
+      include: [db.Score, db.Question]
     }).then(function(dbQuiz) {
+      console.log(dbQuiz);
       res.json(dbQuiz);
     });
   });
@@ -30,7 +33,7 @@ module.exports = function(app) {
       where: {
         name: req.params.name
       },
-      include: [db.score, db.question]
+      include: [db.Score, db.Question]
     }).then(function(dbQuiz) {
       res.json(dbQuiz);
     });

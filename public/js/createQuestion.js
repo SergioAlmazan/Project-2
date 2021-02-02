@@ -1,5 +1,6 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
+  var form = $(".createQuestion");
   var createAnother = $("#submitAndContinue");
   var finishQuiz = $("#submitAndFinish");
   var questionName = $("#question-input");
@@ -8,6 +9,16 @@ $(document).ready(function() {
   var choiceC = $("#choiceC-input");
   var choiceD = $("#choiceD-input");
   var answer = $("#answer-input");
+  var quizId;
+
+  function findQuiz() {
+    $.get("/api/quizes", function(data) {
+      quizId = data.length;
+      return quizId;
+    });
+  }
+
+  findQuiz();
 
   createAnother.on("click", function(event) {
     event.preventDefault();
@@ -25,25 +36,26 @@ $(document).ready(function() {
       return;
     }
 
-    function createQuestion(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
+    function createQuestion(questionName, choiceA, choiceB, choiceC, choiceD, answer, quizId) {
       $.post("/api/createQuestion", {
         question: questionName,
         choiceA: choiceA,
         choiceB: choiceB,
         choiceC: choiceC,
         choiceD: choiceD,
-        answer: answer
+        answer: answer,
+        quizId: quizId
       })
         .then(function() {
-          // take user to where ever they make questions
-          window.location.replace("/createQuestion");
+          // reset form, need index of zero to use jQuery
+          form[0].reset();
         })
         .catch(function(err) {
           console.log(err);
         });
     }
 
-    createQuestion(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer);
+    createQuestion(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer, quizId);
   });
 
   finishQuiz.on("click", function(event) {
@@ -61,17 +73,18 @@ $(document).ready(function() {
       return;
     }
 
-    function createQuestionAndFinish(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
+    function createQuestionAndFinish(questionName, choiceA, choiceB, choiceC, choiceD, answer, quizId) {
       $.post("/api/createQuestion", {
         question: questionName,
         choiceA: choiceA,
         choiceB: choiceB,
         choiceC: choiceC,
         choiceD: choiceD,
-        answer: answer
+        answer: answer,
+        quizId: quizId
       })
         .then(function() {
-          // take user to where ever they make questions
+          // take user back to the user page when they are done making a quiz
           window.location.replace("/user");
         })
         .catch(function(err) {
@@ -79,6 +92,6 @@ $(document).ready(function() {
         });
     }
 
-    createQuestionAndFinish(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer);
+    createQuestionAndFinish(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer, quizId);
   });
 });

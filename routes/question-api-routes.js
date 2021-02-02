@@ -10,7 +10,8 @@ module.exports = function(app) {
       choiceB: req.body.choiceB,
       choiceC: req.body.choiceC,
       choiceD: req.body.choiceD,
-      answer: req.body.answer
+      answer: req.body.answer,
+      QuizId: req.body.quizId
     }).then;
     res.end();
   });

@@ -17,7 +17,6 @@ $(document).ready(function() {
     }
 
     function createQuiz(quizName, subject) {
-      console.log(quizName + subject);
       $.post("/api/createQuiz", {
         name: quizName,
         subject: subject
