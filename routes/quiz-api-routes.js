@@ -37,7 +37,6 @@ module.exports = function(app) {
   });
 
   app.post("/api/createQuiz", function(req, res) {
-    console.log(req.body.name);
     db.Quiz.create({
       name: req.body.name,
       subject: req.body.subject

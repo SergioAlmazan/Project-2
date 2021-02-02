@@ -10,7 +10,7 @@ $(document).ready(function() {
   var choiceD = $("#choiceD-input");
   var answer = $("#answer-input");
 
-  createAnother.on("submit", function(event) {
+  createAnother.on("click", function(event) {
     event.preventDefault();
 
     console.log("createAnother was clicked");
@@ -24,13 +24,14 @@ $(document).ready(function() {
       answer: answer.val().trim()
     };
 
-    if(!questionData.questionName || !questionData.choiceA || !questionData.answer) {
+    console.log(questionData);
+
+    if(!questionData.question || !questionData.choiceA || !questionData.answer) {
       return;
     }
 
-    console.log(questionData);
-
     function createQuestion(questionName, choiceA, choiceB, choiceC, choiceD, answer) {
+      console.log("createQuestion was called");
       $.post("/api/createQuestion", {
         question: questionName,
         choiceA: choiceA,
@@ -51,7 +52,7 @@ $(document).ready(function() {
     createQuestion(questionData.question, questionData.choiceA, questionData.choiceB, questionData.choiceC, questionData.choiceD, questionData.answer);
   });
 
-  finishQuiz.on("submit", function(event) {
+  finishQuiz.on("click", function(event) {
     event.preventDefault();
     var questionData = {
       question: questionName.val().trim(),
@@ -62,7 +63,9 @@ $(document).ready(function() {
       answer: answer.val().trim()
     };
 
-    if(!questionData.questionName || !questionData.choiceA || !questionData.answer) {
+    console.log(questionData);
+
+    if(!questionData.question || !questionData.choiceA || !questionData.answer) {
       return;
     }
 
