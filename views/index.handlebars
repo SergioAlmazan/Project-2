@@ -5,15 +5,18 @@
         <img src="./css/quiznode_logo.png" class="img-fluid" alt="QuizNode logo">
       </a>
 
-      <a href="/login"><button type="button" class="btn btn-outline-secondary navbtn">Login</button></a>
-      <a href="/login"><button type="button" class="btn btn-outline-secondary navbtn">Sign Up</button></a>
-    </div>
-  </div>
-</nav>
+      <div class="d-grid gap-2 d-md-flex">
+        <a href="/login"><button type="button" class="btn btn-outline-secondary navbtn">Login</button></a>
+        <a href="/login"><button type="button" class="btn btn-outline-secondary navbtn">Sign Up</button></a>
+      </div>
 
+    </div>
+  </div> 
+</nav>
+  
 <div class="jumbotron">
   <div class="container text-center">
-    <h1 class="maincaption">One great quiz can change the world.</h1>      
+    <h1>One great quiz can change the world.</h1>      
   </div>
 </div>
 
@@ -21,60 +24,60 @@
   <div class="row justify-content-start mainform">
     <div class="col-md-6">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="./css/create.jpg" alt="Create Image" style="height:250px; width:560px">
-            <div class="carousel-caption">
-              <h3>Create</h3>
-              <p>Create your own quiz.</p>
-            </div>
-          </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
+        <div class="carousel-caption">
+          <h3>Create</h3>
+          <p>Create your own quiz.</p>
+        </div>      
+      </div>
 
-          <div class="item">
-            <img src="./css/take.png" alt="Take Image" style="height:250px; width:560px">
-            <div class="carousel-caption">
-              <h3>Take</h3>
-              <p>Take your own quiz or choose from other users.</p>
-            </div>
-          </div>
+      <div class="item">
+        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <div class="carousel-caption">
+          <h3>Take</h3>
+          <p>Take your own quiz or choose from other users.</p>
+        </div>      
+      </div>
 
-          <div class="item">
-            <img src="./css/shareimage.png" alt="Share Image" style="height:250px; width:560px">
-            <div class="carousel-caption">
-              <h3>Share with the World</h3>
-              <p>Share your quiz with anyone!</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      <div class="item">
+        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <div class="carousel-caption">
+          <h3>Share with the World</h3>
+          <p>Share your quiz with anyone!</p>
+        </div>      
       </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+    </div>
     <div class="col-lg-6 inputsection">
-<form class="row g-3 signup">
+<form class="row g-3">
   <div class="col-8">
     <label for="inputEmail" class="form-label">Email</label>
-    <input type="text" class="form-control" id="username-input1" placeholder="getstarted@quiznode.com">
+    <input type="text" class="form-control" id="inputEmail" placeholder="getstarted@quiznode.com">
   </div>
   <div class="col-8">
     <label for="inputPassword" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password-input1" placeholder="password123">
+    <input type="text" class="form-control" id="inputPassword" placeholder="password123">
   </div>
     <div class="col-12">
     <button type="submit" class="btn btn-secondary signupbtn">Sign Up</button>
@@ -82,9 +85,9 @@
   </div>
 
 
-    </form>
+</form>
+    </div>
   </div>
-</div>
 
 
 
