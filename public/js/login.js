@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   // Getting references to our form and input
-  var signUpForm = $("form.signup");
+  var signUpForm = $("signupbtn");
   var usernameInput = $("input#username-input1");
   var passwordInput = $("input#password-input1");
 
