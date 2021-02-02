@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // route for posting new scores to the db
-  app.post("/api/questionCreate", function(req, res) {
+  app.post("/api/createQuestion", function(req, res) {
     console.log("this was called");
     db.Question.create({
       question: req.body.question,
