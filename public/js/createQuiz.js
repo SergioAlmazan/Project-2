@@ -1,4 +1,3 @@
-/* eslint-disable no-trailing-spaces */
 $(document).ready(function() {
   // Getting references to our form and inputs
   var createQuizForm = $(".createQuiz");
