@@ -34,6 +34,7 @@ module.exports = function(app) {
   // // this is also from hw14
   // // TODO - hide password with bcryptjs
   app.post("/api/signup", function(req, res) {
+    console.log(req.body);
     db.User.create({
       username: req.body.username,
       password: req.body.password
