@@ -46,6 +46,10 @@ html, body {
     margin-bottom: 2rem;
 }
 
+.loginpagemain {
+    margin-top:10%;
+}
+
 .signupbtn {
     margin: auto;
     display: flex;
