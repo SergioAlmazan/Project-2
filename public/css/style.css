@@ -7,11 +7,104 @@ html, body {
     position: relative;
 }
 
+body { 
+    background: #837960 url("./css/create.jpg") 0 0 no-repeat;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(185, 223, 255) 500%);   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stoprgb(185, 223, 255)), color-stop(500%,rgba(130,91,0,1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgb(185, 223, 255) 500%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgb(185, 223, 255) 500%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgb(185, 223, 255) 500%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(185, 223, 255) 500%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#825b00',GradientType=0 ); /*IE6-9 */
+}
+
+.fade-in {
+    margin-left: 1.5rem;
+    font-size: 5rem;
+    margin-top: 10rem;
+    animation: fadeIn ease  3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}
+
+.quote {
+    background: linear-gradient(90deg, #90EE90, rgb(255, 255, 255), rgb(255, 255, 255));
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.945);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+
 .navbar {
     border-radius: 0;
     background-color: white;
     border-style: none;
     padding-bottom: 2rem;
+}
+
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
 .navbtn {
@@ -28,6 +121,7 @@ html, body {
 .jumbotron {
     background-color: whitesmoke;
     margin-bottom: 2rem;
+    background: none;
 }
 
 .g-3{
@@ -44,6 +138,10 @@ html, body {
 
 .form-control {
     margin-bottom: 2rem;
+}
+
+.loginpagemain {
+    margin-top:2.5%;
 }
 
 .signupbtn {
