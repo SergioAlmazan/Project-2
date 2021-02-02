@@ -5,15 +5,15 @@ html, body {
     margin:0;
     height:100%;
     position: relative;
-    background-image: linear-gradient(to bottom right, rgb(83,193,31, 0.2), whitesmoke, rgb(150,61,170, 0.1), whitesmoke, rgb(254,196,63, 0.2));
+    /* background-image: linear-gradient(to bottom right, rgb(83,193,31, 0.2), whitesmoke, rgb(150,61,170, 0.1), whitesmoke, rgb(254,196,63, 0.2));
     background-size: 400%;
-    animation: bg-animation 20s infinite alternate;
+    animation: bg-animation 20s infinite alternate; */
 }
-
+/* 
 @keyframes bg-animation {
     0% {background-position: left}
     100% {background-position: right}
-}
+} */
 
 .navbar {
     border-radius: 0;
@@ -33,23 +33,29 @@ html, body {
     width: 100%;
 }
 
-.container {
-    margin-bottom: 30px;
+.jumbotron {
+    background-color: whitesmoke;
+    margin-bottom: 2rem;
 }
 
-.jumbotron {
-    background-color: white;
+.g-3{
+    margin-top: 1rem;
+}
+
+.mainform {
+    margin-bottom: 2rem;
 }
 
 .form-control {
     margin-bottom: 2rem;
 }
 
-.signinbtn {
+.signupbtn {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
     
 /* Set black background color, white text and some padding */
@@ -59,7 +65,7 @@ footer {
     width: 100%;
     padding: 15px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0px;
 }
 
