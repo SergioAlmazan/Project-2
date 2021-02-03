@@ -22,10 +22,16 @@ module.exports = function(app) {
         res.render("user");
     });
 
+    // sends user to landing page after logging them out
+    app.get("/logout", function(req, res) {
+        req.logout();
+        res.redirect("/");
+    });
+
     // view quiz details and other users score, optional
     app.get("/quiz", function (req, res) {
         res.render("quiz")
-    })
+    });
 
     // directs to page where a new quiz can be created
     app.get("/createQuiz", function(req, res) {
