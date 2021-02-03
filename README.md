@@ -1,5 +1,5 @@
 # QuizNode
-```````````````
+
 ## Summary
 We have decided to create an application where users can create and take quizzes online. Users will be required to create an account. This will allow users to save the quizzes that they create as well as save their scores on others quizzes. When a user wants to create a quiz they will have the option to write new questions or select from questions written by other users. When users want to take a quiz they are able to search for quizzes created by specific users or by quiz topic. When a user completes a quiz their score is saved and can be viewed by other users taking the same quiz.
 
