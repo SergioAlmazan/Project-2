@@ -19,7 +19,7 @@ Navigate to the clone directory in the terminal.
 Run `npm install` to install all dependencies.
 ```
 To use the application locally, the config.js file will need to have your local mysql connection information.\
-You'll also need to create the quiz_db in mysql workbench.\
+You'll also need to create the quiz_db in mysql workbench.
 ```
 Once it's that's all done run `node server.js` in your CLI, and then open in your preferred browswer.
 ```
@@ -33,21 +33,13 @@ Once it's that's all done run `node server.js` in your CLI, and then open in you
 * [NodeJS](https://nodejs.org/)
 * Node Packages:
     * [Express](https://www.npmjs.com/package/express)
-* Node Packages:
     * [bcryptjs](https://www.npmjs.com/package/bcryptjs)
-* Node Packages:
     * [dotenv](https://www.npmjs.com/package/dotenv)
-* Node Packages:
     * [eslint](https://www.npmjs.com/package/eslint)
-* Node Packages:
     * [express-handlebars](https://www.npmjs.com/package/express-handlebars)
-* Node Packages:
     * [express-session](https://www.npmjs.com/package/express-session)
-* Node Packages:
     * [mysql2](https://www.npmjs.com/package/mysql2)
-* Node Packages:
     * [passport](https://www.npmjs.com/package/passport)
-* Node Packages:
     * [sequelize](https://www.npmjs.com/package/sequelize)
 
 
