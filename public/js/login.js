@@ -13,6 +13,7 @@ $(document).ready(function() {
     };
 
     if (!userData.username || !userData.password) {
+      $("#loginerror").text("Please enter a valid username and password.").css("color", "red");
       return;
     }
 
@@ -55,6 +56,7 @@ $(document).ready(function() {
     };
     console.log(userData);
     if (!userData.username || !userData.password) {
+      $("#loginerror").text("Please enter a valid username and password.").css("color", "red");
       return;
     }
     // If we have an username and password, run the signUpUser function
