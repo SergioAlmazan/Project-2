@@ -13,6 +13,7 @@ $(document).ready(function() {
     };
 
     if (!userData.username || !userData.password) {
+      $("#loginerror").text("Please enter a valid username and password.").css("color", "red");
       return;
     }
 
