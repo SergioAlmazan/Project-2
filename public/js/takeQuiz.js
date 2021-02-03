@@ -4,7 +4,7 @@ $(document).ready(function() {
   var quizName = $("#quizName-input");
   var subject = $("#subject-input");
 
-  createQuizForm.on("submit", function(event) {
+  createQuizForm.on("click", function(event) {
     event.preventDefault();
 
     var quizData = {

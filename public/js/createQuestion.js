@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   function findQuiz() {
     $.get("/api/quizes", function(data) {
+      console.log(data);
       quizId = data.length;
       return quizId;
     });
@@ -60,6 +61,7 @@ $(document).ready(function() {
 
   finishQuiz.on("click", function(event) {
     event.preventDefault();
+    console.log("clicked");
     var questionData = {
       question: questionName.val().trim(),
       choiceA: choiceA.val().trim(),
