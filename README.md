@@ -15,12 +15,14 @@ git clone https://github.com/SergioAlmazan/Project-2.git
 ```
 
 Navigate to the clone directory in the terminal.
-
+```
 Run `npm install` to install all dependencies.\
+```
 To use the application locally, the config.js file will need to have your local mysql connection information.\
 You'll also need to create the quiz_db in mysql workbench.\
+```
 Once it's that's all done run `node server.js` in your CLI, and then open in your preferred browswer.
-
+```
 ## Preview:
 ![ScreenShot](/public/css/screenshot.PNG)
 
@@ -50,7 +52,7 @@ Once it's that's all done run `node server.js` in your CLI, and then open in you
 
 
 ## Authors
-Brantley Morris
-Daniel Reza
-Darrell Robinson
+Brantley Morris\
+Daniel Reza\
+Darrell Robinson\
 Sergio Almazan
