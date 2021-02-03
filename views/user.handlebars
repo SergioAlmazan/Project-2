@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/user">
         <img src="./css/quiznode_logo.png" class="img-fluid" alt="QuizNode logo">
       </a>
 
@@ -28,7 +28,28 @@
   </div>
 </div>
 
-<div class="jumbotron jumbotronuser">
+<div class="row quizoptions">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title text-center">Create Your Quiz</h1>
+        <p class="card-text text-center">Create a fully customizable quiz for you to share with anyone.</p>
+        <div class="userbtn d-grid gap-2 col-6 mx-auto"><a href="/createQuiz" class="btn btn-primary">CREATE</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title text-center">Take a Quiz</h1>
+        <p class="card-text text-center">Find and take quizzes that have been created by other users.</p>
+        <div class="userbtn d-grid gap-2 col-6 mx-auto"><a href="/viewQuizes" class="btn btn-primary">TAKE</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="jumbotron jumbotronuser">
   <div class="container text-center">
     <h2>Create a quiz!</h2>      
     <a class="btn btn-primary" href="/createQuiz" role="button">Link</a>
@@ -41,7 +62,7 @@
     <a class="btn btn-primary" href="/viewQuizes" role="button">Link</a>
     <p>Filler</p>
   </div>
-</div>
+</div> --}}
 
 <footer class="d-flex flex-column-reverse container-fluid text-center">
   <p>© 2021 QuizNode All Rights Reserved</p>

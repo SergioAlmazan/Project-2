@@ -130,6 +130,21 @@ body {
   background: none;
   padding-top: 20rem;
 }
+.quizoptions {
+  padding-top: 23rem;
+}
+
+.card-text {
+  font-size: 22px;
+}
+
+.userbtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  /* margin-left: 43.5%; */
+}
 
 .g-3{
     margin-top: 1rem;
