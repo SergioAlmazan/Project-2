@@ -8,6 +8,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "General"
+    },
+    owner: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
 
