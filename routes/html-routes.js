@@ -4,6 +4,7 @@
 // currently these are using handlebars syntax, can be changed later if we decide to use a different templating tool
 
 const path = require("path");
+var passport = require("../config/passport");
 
 module.exports = function(app) {
 
