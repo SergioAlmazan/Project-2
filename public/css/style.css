@@ -154,7 +154,7 @@ body {
 #quiznodemain {
   font-family: "Changa", sans-serif;
   font-size: 12rem;
-  text-shadow: 0px 0px 20px grey;
+  text-shadow: 0px 0px 20px rgb(179, 178, 178);
 }
 
 .node-container {
